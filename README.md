@@ -34,13 +34,15 @@ Thanks for your constructive suggestions and feedback! The insightful and constr
 **[6. Were the results averaged over multiple LLM runs? What is the variance?]**
 
 We do not run multiple LLM trials for three reasons: (1) the inherent randomness has minimal impact on failure attribution performance, as the task is inherently challenging; (2) small variations do not affect the main conclusions of the paper—such as the relative ranking of the three attribution methods; and (3) the large computation cost.
-However, in light of your suggestions, we conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with variance below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
+However, in light of your suggestions, we conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with standard deviation below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
 
 
 |                      | All-at-Once | Step-by-Step | Binary      |
 |----------------------|-------------|--------------|-------------|
 | Agent-Level Accuracy | 53.96 (2.7) | 34.65 (2.2)  | 43.27 (3.4) |
 | Step-Level Accuracy  | 3.96 (0.4)  | 7.78 (0.8)   | 5.86 (0.7)  |
+
+
 
 **[7.  Are the disagreements between annotators usually within a range of steps?]**
 
@@ -49,7 +51,6 @@ No, disagreements are not necessarily confined to a narrow range of steps. Actua
 
 
 **[8. Fig. 5 error bars are too large.]**
-
 
 Thank you for the feedback. We acknowledge that the original figure may be difficult to interpret. In the revised version, we will replace it with a table reporting these results.
 
