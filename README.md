@@ -1,6 +1,6 @@
 # ICML_Anonymous_Reply
 
-Thanks for your constructive suggestions and feedback! The insightful and constructive suggestions have enabled us to effectively improve our work. Please find the additional experimental results and responses below.
+Thanks for your constructive suggestions and feedback! Please find the additional experimental results and responses below.
 
 ## Additioanl Experiments 
 
@@ -21,6 +21,11 @@ Thanks for your constructive suggestions and feedback! The insightful and constr
 | **Skywork-PRM-1.5b** Agent-Level Accuracy | 33.67                                    | 29.31                                    | 29.59                                             | 24.14                                        |
 | **Skywork-PRM-1.5b** Step-Level Accuracy  | 7.14                                    | 3.45                                     | 7.14                                        | 1.72                                         |
 
+
+**Caption:** In light of your constructive suggestions, we evaluated the top 3 PRMs in [3] for failure attribution, using the same experimental setting as in Table 1. Specifically, for each agent trajectory, we used the PRM to assign rewards to individual steps, identified the step with the lowest reward, and attributed the decisive error to that step and its corresponding agent. The results are presented above. We observe that none of the PRMs outperform the All-at-Once method in agent-level accuracy, or perform better than the Step-by-Step method in step-level accuracy. Meanwhile, we believe the undesirable performance of PRM methods again indicates the fundamental difference between the task focused by PRM and the task proposed by us. 
+
+
+
 ### Overlap Percentages of First-Error Step and Decisive-Error Step (Q4)
 
 
@@ -29,20 +34,11 @@ Thanks for your constructive suggestions and feedback! The insightful and constr
 | The same or Not?|48.21%|   51.79%  |
 
 
+**Caption:** In light of your suggestions, we conducted an additional round of annotations—using the same guidelines—on the hand-crafted agentic systems to identify the first-error step. We then compared it to the annotated decisive error step and reported the percentage of overlap in the table below. Due to limited rebuttal time, we focused this analysis only on the hand-crafted systems. The results show that in nearly half of the cases, the first error is followed by successful self-correction, and the decisive error step is not the same as the first mistake.  
 
 
+### Multiple LLM Runs (Q6)
 
-## More Replies
-
-**[6. Were the results averaged over multiple LLM runs? What is the variance?]**
-
-Thanks for the feedback. We do not run multiple LLM trials for three reasons: 
-
-**(1)** the inherent randomness has minimal impact on failure attribution performance, as the task is inherently challenging; 
-
-**(2)** small variations do not affect the main conclusions of the paper—such as the relative ranking of the three attribution methods; and (3) the large computation cost.
-
-However, in light of your suggestions, we conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with variance below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
 
 
 |                      | All-at-Once | Step-by-Step | Binary      |
@@ -50,21 +46,6 @@ However, in light of your suggestions, we conducted five runs for each of the th
 | Agent-Level Accuracy | 53.96 (2.7) | 34.65 (2.2)  | 43.27 (3.4) |
 | Step-Level Accuracy  | 3.96 (0.4)  | 7.78 (0.8)   | 5.86 (0.7)  |
 
-**[7.  Are the disagreements between annotators usually within a range of steps?]**
 
+**Caption:** We conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with variance below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
 
-Thanks for the feedback. No, disagreements are not necessarily confined to a narrow range of steps. Actually, the ambiguous decisive-error between annotators do not exhibit a strong correlation with their positional distance within the trajectory. 
-
-
-**[8. Fig. 5 error bars are too large.]**
-
-
-Thank you for the feedback. We acknowledge that the original figure may be difficult to interpret. In the revised version, we will replace it with a table reporting these results.
-
-**[9. What length values do the 5 levels in Figure 4 correspond to?]**
-
-Thank you for your feedback. The five levels in Figure 4 correspond to different context lengths of agentic system trajectories. Specifically, we evenly divide the range of failure log lengths—from the minimum to the maximum—into five distinct levels, with context lengths progressively increasing from Level 1 to Level 5. The approximate ranges are as follows: Level 1 corresponds to lengths of 5–17 steps, Level 2 to 19–29 steps, Level 3 to 31–49 steps, Level 4 to 51–91 steps, and Level 5 to 93–130 steps. We report both agent-level accuracy and step-level accuracy separately for each level. We will make this clearer in the revised manuscript. Thank you again for your helpful suggestion.
-
-**[10. Lines 036-040 and 047-059 are weirdly phrased?]**
-
-Thank you for the constructive suggestions! In the next version, we will rephrase the sentences to make them clearer. Please let us know if you have any detailed revision suggestions—we’re eager to address them.
