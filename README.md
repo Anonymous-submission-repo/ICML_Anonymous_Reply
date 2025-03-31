@@ -40,12 +40,11 @@ Thanks for your constructive suggestions and feedback! Please find the additiona
 ### Multiple LLM Runs (Q6)
 
 
-
 |                      | All-at-Once | Step-by-Step | Binary      |
 |----------------------|-------------|--------------|-------------|
 | Agent-Level Accuracy | 53.96 (2.7) | 34.65 (2.2)  | 43.27 (3.4) |
 | Step-Level Accuracy  | 3.96 (0.4)  | 7.78 (0.8)   | 5.86 (0.7)  |
 
 
-**Caption:** We conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with variance below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
+**Caption:** We conducted five runs for each of the three methods under the same setting as Table 4 and reported the results with standard deviation below. We observe that the conclusions presented in the paper still hold—the relative ranking of the different methods remains consistent across evaluation metrics.
 
